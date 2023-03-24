@@ -26,7 +26,7 @@ import { useDispatch } from 'react-redux'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useReducer } from 'react'
-import { registernuser } from '../../../Redux/Registration/action'
+import { registernuser } from '../../../redux/registration/action'
 const CFaUserAlt = chakra(FaUserAlt)
 const CFaLock = chakra(FaLock)
 

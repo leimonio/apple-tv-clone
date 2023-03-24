@@ -22,7 +22,7 @@ import { useNavigate } from 'react-router'
 import { Signin } from './Signin'
 import { Signup } from './Signup'
 import { useDispatch } from 'react-redux'
-import { logout } from '../../../Redux/Login/action'
+import { logout } from '../../../redux/login/action'
 
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
