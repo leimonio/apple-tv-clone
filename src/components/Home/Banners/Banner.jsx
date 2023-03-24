@@ -15,7 +15,7 @@ import {
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick'
-import { cards } from '../Data/Data'
+import { cards } from '../../../db'
 
 // Settings for the slider
 const settings = {

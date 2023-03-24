@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Box } from '@chakra-ui/react'
 import './Footer.css'
-import TV from '../Images/TV App Logo.png'
 
 export const Footer = () => {
   return (

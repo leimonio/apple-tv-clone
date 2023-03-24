@@ -5,10 +5,10 @@ import {
 } from 'redux'
 
 import thunk from 'redux-thunk'
-import { AuthReducer } from './Auth/reducer'
-import { loginreducer } from './Login/reducer'
-import { MoviesReducer } from './Movies/reducer'
-import { registerReducer } from './Registration/reducer'
+import { AuthReducer } from './auth/reducer'
+import { loginreducer } from './login/reducer'
+import { MoviesReducer } from './movies/reducer'
+import { registerReducer } from './registration/reducer'
 
 const rootReducers = combineReducers({
   Movies: MoviesReducer,

@@ -9,12 +9,11 @@ import {
   jumboSliderData,
   dramaSeries,
   severWN,
-  featurefilms,
   comSeries,
   amazPlanet,
   nonFi,
   kidsFam,
-} from './Data/Data'
+} from '../../db';
 
 import { Box } from '@chakra-ui/react'
 import { Footer } from './Footer/Footer'
