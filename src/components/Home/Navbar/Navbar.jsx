@@ -10,6 +10,7 @@ import {
   MenuItem,
   MenuButton,
   Button,
+  Heading,
   useDisclosure,
 } from '@chakra-ui/react'
 import { BsPerson } from 'react-icons/bs'
@@ -41,15 +42,26 @@ function Navbar() {
     >
       <Box p="2">
         <Link to="/">
-          <img
+          <Heading
+            fontSize="xl"
+            fontStyle="bold"
+            color="white"
+            p={1.5}
+            m={0}
+            ml={50}
+            as="h1"
+          >
+            Video+
+          </Heading>
+          {/* <img
             alt=""
             style={{ marginLeft: '50px', width: '70px', padding: '5px' }}
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfBiEc2Q442yUNt4aDxe9ZQOYi9Zh0O8NX00KLxLBxMsZSFbF2VGH_arUXiXUFKBgtBHg&usqp=CAU"
-          />
+          /> */}
         </Link>
       </Box>
       <Spacer />
-      {token === undefined || token === '' ? (
+      {!token ? (
         <ButtonGroup gap="2">
           <Button
             leftIcon={<BsPerson />}

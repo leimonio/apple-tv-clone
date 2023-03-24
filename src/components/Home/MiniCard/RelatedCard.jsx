@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
 import Carousel from 'react-simply-carousel'
 import { Heading, Box, Text, Divider } from '@chakra-ui/react'
 import './CardCaro.css'
@@ -83,6 +82,7 @@ export const RelatedCard = ({ data, title, minititle }) => {
                   'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px',
               }}
               src={item.image}
+              alt=""
             />
           </Box>
         ))}

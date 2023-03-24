@@ -20,15 +20,11 @@ import {
 import React, { useState } from 'react'
 import { MdOutlineEmail } from 'react-icons/md'
 import { BsFillCalendarDateFill } from 'react-icons/bs'
-import { FaUserAlt, FaLock } from 'react-icons/fa'
+import { FaUserAlt } from 'react-icons/fa'
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import { useDispatch } from 'react-redux'
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
-import { useReducer } from 'react'
 import { registernuser } from '../../../redux/registration/action'
 const CFaUserAlt = chakra(FaUserAlt)
-const CFaLock = chakra(FaLock)
 
 const initState = {
   name: '',
@@ -52,8 +48,6 @@ export const Signup = ({
     let { name, value } = e.target
     setuser({ ...user, [name]: value })
   }
-
-  const handleShowClick = () => setShowPassword(!showPassword)
 
   const handelsubmit = (event) => {
     event.preventDefault()

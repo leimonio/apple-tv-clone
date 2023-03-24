@@ -22,7 +22,7 @@ import { CardCarousel } from './MiniCard/CardCarousel'
 
 function Home() {
   return (
-    <Box top="30px" mt={70}>
+    <Box top="30px" mt={68}>
       <Banner />
       <CardCarousel
         data={comingSoon}
