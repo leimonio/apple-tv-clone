@@ -13,36 +13,36 @@ import {
   FormControl,
   FormLabel,
   AlertDialogOverlay,
-} from "@chakra-ui/react";
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-import { getusertoken } from "../../../Redux/Login/action";
-import { useNavigate } from "react-router-dom";
+} from '@chakra-ui/react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
+import { getusertoken } from '../../../Redux/Login/action'
+import { useNavigate } from 'react-router-dom'
 
 const init = {
-  email: "",
-  password: "",
-};
+  email: '',
+  password: '',
+}
 
 export const Signin = ({ isOpen, onClose, cancelRef, handelhideshow }) => {
-  const [userlogin, setuserlogin] = useState(init);
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const [showPassword, setShowPassword] = useState(false);
+  const [userlogin, setuserlogin] = useState(init)
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const [showPassword, setShowPassword] = useState(false)
 
-  const handleShowClick = () => setShowPassword(!showPassword);
+  const handleShowClick = () => setShowPassword(!showPassword)
 
   const handleChange = (e) => {
-    let { name, value } = e.target;
-    setuserlogin({ ...userlogin, [name]: value });
-  };
+    let { name, value } = e.target
+    setuserlogin({ ...userlogin, [name]: value })
+  }
 
   const handelsubmit = (event) => {
     dispatch(getusertoken({ userlogin, handelhideshow, onClose })).then(() => {
-      onClose();
-    });
-  };
+      onClose()
+    })
+  }
 
   return (
     <>
@@ -95,14 +95,14 @@ export const Signin = ({ isOpen, onClose, cancelRef, handelhideshow }) => {
                   <FormControl>
                     <InputGroup>
                       <Input
-                        type={showPassword ? "text" : "password"}
+                        type={showPassword ? 'text' : 'password'}
                         placeholder="Password"
                         name="password"
                         onChange={handleChange}
                       />
-                      <InputRightElement h={"full"}>
+                      <InputRightElement h={'full'}>
                         <Button
-                          variant={"ghost"}
+                          variant={'ghost'}
                           onClick={() =>
                             setShowPassword((showPassword) => !showPassword)
                           }
@@ -121,8 +121,8 @@ export const Signin = ({ isOpen, onClose, cancelRef, handelhideshow }) => {
                   color=" #0b057ab8"
                   onClick={handelhideshow}
                   _hover={{
-                    textDecoration: "underline",
-                    color: " #057a72b8",
+                    textDecoration: 'underline',
+                    color: ' #057a72b8',
                   }}
                 >
                   Create New Apple ID
@@ -139,7 +139,7 @@ export const Signin = ({ isOpen, onClose, cancelRef, handelhideshow }) => {
         </AlertDialogOverlay>
       </AlertDialog>
     </>
-  );
-};
+  )
+}
 // https://apple-tv-plus-clone.vercel.app/
 // https://github.com/vadimghedreutan/Apple-tv-plus-clone

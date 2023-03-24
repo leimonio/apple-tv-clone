@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Box } from "@chakra-ui/react";
-import "./Footer.css";
-import TV from "../Images/TV App Logo.png";
+import React, { useState } from 'react'
+import { Box } from '@chakra-ui/react'
+import './Footer.css'
+import TV from '../Images/TV App Logo.png'
 
 export const Footer = () => {
   return (
@@ -9,7 +9,7 @@ export const Footer = () => {
       <div id="devices-info_container">
         <div className="devices-info">
           <div className="tv-logo">
-            <img src={require("../Images/TV App Logo.png")} alt="" />
+            <img src={require('../Images/TV App Logo.png')} alt="" />
           </div>
           <p className="devices-heading">Watch Apple TV+ here or anywhere.</p>
           <p className="devices-subheading">
@@ -23,23 +23,23 @@ export const Footer = () => {
           </p>
           <div className="devices">
             <div className="device">
-              <img src={require("../Images/product_landing 1.png")} />
+              <img src={require('../Images/product_landing 1.png')} />
               <p className="dev-cat">Apple TV</p>
             </div>
             <div className="device">
-              <img src={require("../Images/product_landing 2.png")} />
+              <img src={require('../Images/product_landing 2.png')} />
               <p className="dev-cat">iPhone</p>
             </div>
             <div className="device">
-              <img src={require("../Images/product_landing 3.png")} />
+              <img src={require('../Images/product_landing 3.png')} />
               <p className="dev-cat">iPad</p>
             </div>
             <div className="device">
-              <img src={require("../Images/product_landing 4.png")} />
+              <img src={require('../Images/product_landing 4.png')} />
               <p className="dev-cat">Mac</p>
             </div>
             <div className="device">
-              <img src={require("../Images/product_landing 5.png")} />
+              <img src={require('../Images/product_landing 5.png')} />
               <p className="dev-cat">Airplay</p>
             </div>
           </div>
@@ -109,5 +109,5 @@ export const Footer = () => {
         </div>
       </footer>
     </Box>
-  );
-};
+  )
+}

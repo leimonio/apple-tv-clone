@@ -1,9 +1,6 @@
-
-import './App.css';
-import { AllRoutes } from './componants/AllRoutes/AllRoutes';
-
-import Navbar from './componants/Home/Navbar/Navbar';
-
+import './App.css'
+import { Navbar } from './components/Home/Navbar/Navbar'
+import { AllRoutes } from './components/AllRoutes/AllRoutes'
 
 function App() {
   return (
@@ -11,7 +8,7 @@ function App() {
       <Navbar />
       <AllRoutes />
     </div>
-  );
+  )
 }
-//https://github.com/vadimghedreutan/Apple-tv-plus-clone/tree/main/src
-export default App;
+
+export { App }

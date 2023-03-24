@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext } from 'react'
 import {
   Flex,
   Spacer,
@@ -14,25 +14,25 @@ import {
   Button,
   AlertDialog,
   useDisclosure,
-} from "@chakra-ui/react";
-import { BsPerson } from "react-icons/bs";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router";
-import { Signin } from "./Signin";
-import { Signup } from "./Signup";
-import { useDispatch } from "react-redux";
-import { logout } from "../../../Redux/Login/action";
+} from '@chakra-ui/react'
+import { BsPerson } from 'react-icons/bs'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router'
+import { Signin } from './Signin'
+import { Signup } from './Signup'
+import { useDispatch } from 'react-redux'
+import { logout } from '../../../Redux/Login/action'
 
 function Navbar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [hide, sethide] = useState(true);
-  const cancelRef = React.useRef();
-  const dispatch = useDispatch();
-  const token = JSON.parse(localStorage.getItem("tvappletoken"));
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [hide, sethide] = useState(true)
+  const cancelRef = React.useRef()
+  const dispatch = useDispatch()
+  const token = JSON.parse(localStorage.getItem('tvappletoken'))
   const handelhideshow = () => {
-    sethide(!hide);
-  };
+    sethide(!hide)
+  }
   return (
     <Flex
       top={0}
@@ -47,13 +47,13 @@ function Navbar() {
       <Box p="2">
         <Link to="/">
           <img
-            style={{ marginLeft: "50px", width: "70px", padding: "5px" }}
+            style={{ marginLeft: '50px', width: '70px', padding: '5px' }}
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfBiEc2Q442yUNt4aDxe9ZQOYi9Zh0O8NX00KLxLBxMsZSFbF2VGH_arUXiXUFKBgtBHg&usqp=CAU"
           />
         </Link>
       </Box>
       <Spacer />
-      {token == undefined || token == "" ? (
+      {token == undefined || token == '' ? (
         <ButtonGroup gap="2">
           <Button
             leftIcon={<BsPerson />}
@@ -85,22 +85,22 @@ function Navbar() {
         <Menu>
           <MenuButton
             as={Button}
-            rounded={"full"}
-            variant={"link"}
-            cursor={"pointer"}
+            rounded={'full'}
+            variant={'link'}
+            cursor={'pointer'}
             minW={0}
           >
             <Avatar
-              size={"md"}
+              size={'md'}
               src={
-                "https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
+                'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
               }
             />
           </MenuButton>
           <MenuList>
             <MenuItem
               onSelect={() => {
-                dispatch(logout());
+                dispatch(logout())
               }}
             >
               Logout
@@ -109,10 +109,10 @@ function Navbar() {
         </Menu>
       )}
     </Flex>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
 // dispatch(getusertoken({ userlogin, handelhideshow, onClose })).then(() => {
 //   onClose();
 // });

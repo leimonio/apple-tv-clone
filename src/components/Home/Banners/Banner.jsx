@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 import {
   Box,
@@ -10,12 +10,12 @@ import {
   Text,
   Center,
   Container,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react'
 // Here we have used react-icons package for the icons
-import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
+import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
 // And react-slick as our Carousel Lib
-import Slider from "react-slick";
-import { cards } from "../Data/Data";
+import Slider from 'react-slick'
+import { cards } from '../Data/Data'
 
 // Settings for the slider
 const settings = {
@@ -28,20 +28,20 @@ const settings = {
   autoplaySpeed: 3000,
   slidesToShow: 1,
   slidesToScroll: 1,
-};
+}
 
 export default function Banner() {
-  const [slider, setSlider] = useState("");
+  const [slider, setSlider] = useState('')
 
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
-  const side = useBreakpointValue({ base: "30%", md: "40px" });
+  const top = useBreakpointValue({ base: '90%', md: '50%' })
+  const side = useBreakpointValue({ base: '30%', md: '40px' })
 
   return (
     <Box
-      position={"relative"}
-      height={"650px"}
-      width={"full"}
-      overflow={"hidden"}
+      position={'relative'}
+      height={'650px'}
+      width={'full'}
+      overflow={'hidden'}
     >
       {/* CSS files for react-slick */}
       <link
@@ -62,7 +62,7 @@ export default function Banner() {
         position="absolute"
         left={side}
         top={top}
-        transform={"translate(0%, -50%)"}
+        transform={'translate(0%, -50%)'}
         zIndex={2}
         onClick={() => slider?.slickPrev()}
       >
@@ -75,7 +75,7 @@ export default function Banner() {
         position="absolute"
         right={side}
         top={top}
-        transform={"translate(0%, -50%)"}
+        transform={'translate(0%, -50%)'}
         zIndex={2}
         onClick={() => slider?.slickNext()}
       >
@@ -86,7 +86,7 @@ export default function Banner() {
         {cards.map((card, index) => (
           <Box
             key={index}
-            height={"2xl"}
+            height={'2xl'}
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
@@ -97,7 +97,7 @@ export default function Banner() {
               <Stack
                 spacing={6}
                 border="1px soild red"
-                w={"full"}
+                w={'full'}
                 // maxW={"10xl"}
                 position="absolute"
                 color="white"
@@ -106,7 +106,7 @@ export default function Banner() {
               >
                 <Heading
                   //   maxW={"4xl"}
-                  fontSize={{ base: "3xl", md: "4xl", lg: "7xl" }}
+                  fontSize={{ base: '3xl', md: '4xl', lg: '7xl' }}
                   //   w={{ base: "1000", md: "1000", lg: "1000" }}
                 >
                   {/* All Apple Originals */}
@@ -128,5 +128,5 @@ export default function Banner() {
         ))}
       </Slider>
     </Box>
-  );
+  )
 }

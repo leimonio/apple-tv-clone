@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import {
   Box,
   IconButton,
@@ -8,9 +8,9 @@ import {
   Button,
   Center,
   Divider,
-} from "@chakra-ui/react";
-import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
-import Slider from "react-slick";
+} from '@chakra-ui/react'
+import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
+import Slider from 'react-slick'
 
 const settings = {
   dots: true,
@@ -22,24 +22,23 @@ const settings = {
   autoplaySpeed: 3000,
   slidesToShow: 1,
   slidesToScroll: 1,
-};
+}
 
 export default function MiniBanner({ data }) {
-  const [slider, setSlider] = useState("");
+  const [slider, setSlider] = useState('')
 
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
-  const side = useBreakpointValue({ base: "30%", md: "40px" });
+  const top = useBreakpointValue({ base: '90%', md: '50%' })
+  const side = useBreakpointValue({ base: '30%', md: '40px' })
 
   return (
-    
     <Center mt={5}>
       <Box
-        justifyContent={"center"}
-        alignItems={"center"}
-        position={"relative"}
-        height={"500px"}
-        width={"80%"}
-        overflow={"hidden"}
+        justifyContent={'center'}
+        alignItems={'center'}
+        position={'relative'}
+        height={'500px'}
+        width={'80%'}
+        overflow={'hidden'}
       >
         {/* CSS files for react-slick */}
         <link
@@ -60,7 +59,7 @@ export default function MiniBanner({ data }) {
           position="absolute"
           left={side}
           top={top}
-          transform={"translate(0%, -50%)"}
+          transform={'translate(0%, -50%)'}
           zIndex={2}
           onClick={() => slider?.slickPrev()}
         >
@@ -73,7 +72,7 @@ export default function MiniBanner({ data }) {
           position="absolute"
           right={side}
           top={top}
-          transform={"translate(0%, -50%)"}
+          transform={'translate(0%, -50%)'}
           zIndex={2}
           onClick={() => slider?.slickNext()}
         >
@@ -84,7 +83,7 @@ export default function MiniBanner({ data }) {
           {data.map((card, index) => (
             <Box
               key={index}
-              height={"lg"}
+              height={'lg'}
               position="relative"
               backgroundPosition="center"
               backgroundRepeat="no-repeat"
@@ -97,5 +96,5 @@ export default function MiniBanner({ data }) {
         <Divider borderWidth="2px" ml={5} mr={5} colorScheme="gray.100" />
       </Box>
     </Center>
-  );
+  )
 }

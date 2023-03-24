@@ -1,27 +1,26 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import Carousel from "react-simply-carousel";
-import { Heading, Box, Text, Divider } from "@chakra-ui/react";
-import "./CardCaro.css";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react'
+import ReactDOM from 'react-dom'
+import Carousel from 'react-simply-carousel'
+import { Heading, Box, Text, Divider } from '@chakra-ui/react'
+import './CardCaro.css'
+import { useNavigate } from 'react-router-dom'
 
 export const CardCarousel = ({ data, title, minititle }) => {
-
-  const [activeSlide, setActiveSlide] = useState(0);
+  const [activeSlide, setActiveSlide] = useState(0)
   const navigate = useNavigate()
 
   return (
     <Box className="minicard" p={3} pt={5}>
       <Heading
-        size={{ base: "md", md: "md", lg: "md" }}
-        align={"start"}
+        size={{ base: 'md', md: 'md', lg: 'md' }}
+        align={'start'}
         ml={{ base: 20, md: 40, lg: 40 }}
       >
         {title}
       </Heading>
       <Text
-        size={{ base: "md", md: "lg", lg: "lg" }}
-        align={"start"}
+        size={{ base: 'md', md: 'lg', lg: 'lg' }}
+        align={'start'}
         ml={{ base: 20, md: 40, lg: 40 }}
       >
         {minititle}
@@ -31,8 +30,8 @@ export const CardCarousel = ({ data, title, minititle }) => {
         updateOnItemClick
         containerProps={{
           style: {
-            width: "100%",
-            justifyContent: "space-between",
+            width: '100%',
+            justifyContent: 'space-between',
           },
         }}
         activeSlideIndex={activeSlide}
@@ -43,21 +42,21 @@ export const CardCarousel = ({ data, title, minititle }) => {
         }}
         onRequestChange={setActiveSlide}
         forwardBtnProps={{
-          children: ">",
+          children: '>',
           style: {
             width: 50,
             height: 60,
             minWidth: 60,
-            alignSelf: "center",
+            alignSelf: 'center',
           },
         }}
         backwardBtnProps={{
-          children: "<",
+          children: '<',
           style: {
             width: 60,
             height: 60,
             minWidth: 60,
-            alignSelf: "center",
+            alignSelf: 'center',
           },
         }}
         itemsToShow={{ base: 2, md: 4, lg: 5 }}
@@ -65,22 +64,23 @@ export const CardCarousel = ({ data, title, minititle }) => {
         speed={400}
       >
         {data.map((item, index) => (
-          <Box onClick={() => navigate(`/details/${item.id}`)}
-            width={{ base: "300px", md: "300px", lg: "300px" }}
+          <Box
+            onClick={() => navigate(`/details/${item.id}`)}
+            width={{ base: '300px', md: '300px', lg: '300px' }}
             p={5}
             style={{
               height: 200,
-              textAlign: "center",
+              textAlign: 'center',
               // lineHeight: "240px",
-              borderRadius: "20px",
+              borderRadius: '20px',
             }}
             key={index}
           >
             <img
               style={{
-                borderRadius: "20px",
+                borderRadius: '20px',
                 boxShadow:
-                  "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
+                  'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px',
               }}
               src={item.image}
             />
@@ -89,5 +89,5 @@ export const CardCarousel = ({ data, title, minititle }) => {
       </Carousel>
       <Divider borderWidth="2px" ml={5} mr={5} colorScheme="gray.100" />
     </Box>
-  );
-};
+  )
+}

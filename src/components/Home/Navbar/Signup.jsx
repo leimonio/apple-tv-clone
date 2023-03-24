@@ -16,26 +16,26 @@ import {
   Link,
   FormControl,
   InputRightElement,
-} from "@chakra-ui/react";
-import React, { useState } from "react";
-import { MdOutlineEmail } from "react-icons/md";
-import { BsFillCalendarDateFill } from "react-icons/bs";
-import { FaUserAlt, FaLock } from "react-icons/fa";
-import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-import { useDispatch } from "react-redux";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { useReducer } from "react";
-import { registernuser } from "../../../Redux/Registration/action";
-const CFaUserAlt = chakra(FaUserAlt);
-const CFaLock = chakra(FaLock);
+} from '@chakra-ui/react'
+import React, { useState } from 'react'
+import { MdOutlineEmail } from 'react-icons/md'
+import { BsFillCalendarDateFill } from 'react-icons/bs'
+import { FaUserAlt, FaLock } from 'react-icons/fa'
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
+import { useDispatch } from 'react-redux'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import { useReducer } from 'react'
+import { registernuser } from '../../../Redux/Registration/action'
+const CFaUserAlt = chakra(FaUserAlt)
+const CFaLock = chakra(FaLock)
 
 const initState = {
-  name: "",
-  email: "",
-  password: "",
+  name: '',
+  email: '',
+  password: '',
   // dateofbirth: "",
-};
+}
 
 export const Signup = ({
   isOpen,
@@ -44,23 +44,23 @@ export const Signup = ({
   cancelRef,
   handelhideshow,
 }) => {
-  const [showPassword, setShowPassword] = useState(false);
-  const [user, setuser] = useState(initState);
-  const dispatch = useDispatch();
+  const [showPassword, setShowPassword] = useState(false)
+  const [user, setuser] = useState(initState)
+  const dispatch = useDispatch()
 
   const handleChange = (e) => {
-    let { name, value } = e.target;
-    setuser({ ...user, [name]: value });
-  };
+    let { name, value } = e.target
+    setuser({ ...user, [name]: value })
+  }
 
-  const handleShowClick = () => setShowPassword(!showPassword);
+  const handleShowClick = () => setShowPassword(!showPassword)
 
   const handelsubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault()
     dispatch(registernuser(user)).then(() => {
-      handelhideshow();
-    });
-  };
+      handelhideshow()
+    })
+  }
 
   return (
     <>
@@ -104,7 +104,7 @@ export const Signup = ({
                     color="gray.300"
                     children={<MdOutlineEmail color="gray.300" />}
                   />
-               
+
                   <Input
                     type="email"
                     placeholder="    Email address"
@@ -132,14 +132,14 @@ export const Signup = ({
               <FormControl mt={5}>
                 <InputGroup>
                   <Input
-                    type={showPassword ? "text" : "password"}
+                    type={showPassword ? 'text' : 'password'}
                     placeholder="Password"
                     name="password"
                     onChange={handleChange}
                   />
-                  <InputRightElement h={"full"}>
+                  <InputRightElement h={'full'}>
                     <Button
-                      variant={"ghost"}
+                      variant={'ghost'}
                       onClick={() =>
                         setShowPassword((showPassword) => !showPassword)
                       }
@@ -164,15 +164,15 @@ export const Signup = ({
               </AlertDialogFooter>
             </Center>
             <Stack pt={3} mb={5}>
-              <Text align={"center"}>
-                Already a user? <Link color={"blue.400"}>Login</Link>
+              <Text align={'center'}>
+                Already a user? <Link color={'blue.400'}>Login</Link>
               </Text>
             </Stack>
           </AlertDialogContent>
         </AlertDialogOverlay>
       </AlertDialog>
     </>
-  );
-};
+  )
+}
 // https://apple-tv-plus-clone.vercel.app/
 // https://github.com/vadimghedreutan/Apple-tv-plus-clone
