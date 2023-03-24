@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { DetailsMain } from '../components/DetailsMain/DetailsMain'
-import { comingSoon } from '../db';
+import { comingSoon } from '../db'
 
 export const HomeDetails = () => {
   const { id } = useParams()

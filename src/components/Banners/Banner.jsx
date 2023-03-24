@@ -25,7 +25,7 @@ const settings = {
   slidesToScroll: 1,
 }
 
-export default function Banner() {
+export function Banner() {
   const [slider, setSlider] = useState('')
 
   const top = useBreakpointValue({ base: '90%', md: '50%' })

@@ -87,7 +87,13 @@ export const CardCarousel = ({ data, title, minititle }) => {
           </Box>
         ))}
       </Carousel>
-      <Divider borderWidth="2px" w="auto" ml={5} mr={5} colorScheme="gray.100" />
+      <Divider
+        borderWidth="2px"
+        w="auto"
+        ml={5}
+        mr={5}
+        colorScheme="gray.100"
+      />
     </Box>
   )
 }

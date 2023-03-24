@@ -986,5 +986,5 @@ export {
   kidsFam,
   RelatedData,
   CastData,
-  SeasonData
+  SeasonData,
 }

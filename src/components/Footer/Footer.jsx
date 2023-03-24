@@ -12,8 +12,8 @@ export const Footer = () => {
           </div>
           <p className="devices-heading">Watch Video+ here or anywhere.</p>
           <p className="devices-subheading">
-            Find Video+ on the Video app, available on Apple Devices,
-            smart TVs, and more.
+            Find Video+ on the Video app, available on Apple Devices, smart TVs,
+            and more.
           </p>
           <p className="support-link">
             <a href="https://support.apple.com/en-in/guide/tvplus/welcome/web">
