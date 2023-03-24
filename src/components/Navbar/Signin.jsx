@@ -17,7 +17,7 @@ import {
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
-import { getusertoken } from '../../../redux/login/action'
+import { getusertoken } from '../../redux/login/action'
 
 const init = {
   email: '',

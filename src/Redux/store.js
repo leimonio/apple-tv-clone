@@ -18,5 +18,3 @@ const rootReducers = combineReducers({
 })
 
 export const store = createStore(rootReducers, applyMiddleware(thunk))
-
-console.log('initial todos', store.getState())

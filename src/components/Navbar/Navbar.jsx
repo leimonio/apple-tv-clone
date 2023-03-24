@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom'
 import { Signin } from './Signin'
 import { Signup } from './Signup'
 import { useDispatch } from 'react-redux'
-import { logout } from '../../../redux/login/action'
+import { logout } from '../../redux/login/action'
 
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure()

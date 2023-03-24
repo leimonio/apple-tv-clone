@@ -23,7 +23,7 @@ import { BsFillCalendarDateFill } from 'react-icons/bs'
 import { FaUserAlt } from 'react-icons/fa'
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import { useDispatch } from 'react-redux'
-import { registernuser } from '../../../redux/registration/action'
+import { registernuser } from '../../redux/registration/action'
 const CFaUserAlt = chakra(FaUserAlt)
 
 const initState = {

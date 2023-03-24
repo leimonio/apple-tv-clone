@@ -1,4 +1,8 @@
-import Banner from './Banners/Banner'
+import { Box } from '@chakra-ui/react'
+import { Footer } from '../components/Footer/Footer'
+import { MiniBanner } from '../components/MiniBanner/MiniBanner'
+import { CardCarousel } from '../components/MiniCard/CardCarousel'
+import Banner from '../components/Banners/Banner'
 import {
   comingSoon,
   tales,
@@ -13,12 +17,7 @@ import {
   amazPlanet,
   nonFi,
   kidsFam,
-} from '../../db';
-
-import { Box } from '@chakra-ui/react'
-import { Footer } from './Footer/Footer'
-import MiniBanner from './MiniBanner/MiniBanner'
-import { CardCarousel } from './MiniCard/CardCarousel'
+} from '../db';
 
 function Home() {
   return (

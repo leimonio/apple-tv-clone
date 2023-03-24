@@ -21,7 +21,7 @@ const settings = {
   slidesToScroll: 1,
 }
 
-export default function MiniBanner({ data }) {
+export function MiniBanner({ data }) {
   const [slider, setSlider] = useState('')
 
   const top = useBreakpointValue({ base: '90%', md: '50%' })

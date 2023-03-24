@@ -1,8 +1,8 @@
 import { Box } from '@chakra-ui/react'
-import { DetailsCard } from '../Home/MiniCard/DetailsCard'
+import { DetailsCard } from '../MiniCard/DetailsCard'
 import { RelatedData, SeasonData } from '../../db'
-import { RelatedCard } from '../Home/MiniCard/RelatedCard'
-import { DetailsFooter } from './DetailsFooter'
+import { RelatedCard } from '../MiniCard/RelatedCard'
+import { DetailsFooter } from '../DetailsFooter/DetailsFooter'
 
 export const DetailsMain = () => {
   return (
