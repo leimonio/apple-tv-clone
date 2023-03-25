@@ -1,0 +1,29 @@
+
+> tvapple-clone-host@0.1.0 serve
+> serve -s build -p 3000
+
+ INFO  Accepting connections at http://localhost:3000
+ HTTP  3/25/2023 8:22:58 AM ::1 GET /sw.js
+ HTTP  3/25/2023 8:22:58 AM ::1 Returned 200 in 21 ms
+ HTTP  3/25/2023 8:22:58 AM ::1 GET /
+ HTTP  3/25/2023 8:22:58 AM ::1 Returned 200 in 2 ms
+ HTTP  3/25/2023 8:22:58 AM ::1 GET /static/js/main.34cdb567.js
+ HTTP  3/25/2023 8:22:58 AM ::1 GET /static/css/main.ea8a5f66.css
+ HTTP  3/25/2023 8:22:58 AM ::1 Returned 200 in 2 ms
+ HTTP  3/25/2023 8:22:58 AM ::1 Returned 200 in 5 ms
+ HTTP  3/25/2023 8:22:58 AM ::1 GET /Images/banner%201.png
+ HTTP  3/25/2023 8:22:58 AM ::1 GET /Images/banner%202.png
+ HTTP  3/25/2023 8:22:58 AM ::1 GET /Images/banner%203.png
+ HTTP  3/25/2023 8:22:58 AM ::1 Returned 200 in 2 ms
+ HTTP  3/25/2023 8:22:58 AM ::1 Returned 200 in 2 ms
+ HTTP  3/25/2023 8:22:58 AM ::1 Returned 200 in 1 ms
+ HTTP  3/25/2023 8:22:58 AM ::1 GET /manifest.json
+ HTTP  3/25/2023 8:22:58 AM ::1 Returned 200 in 1 ms
+ HTTP  3/25/2023 8:22:58 AM ::1 GET /logo192.png
+ HTTP  3/25/2023 8:22:58 AM ::1 Returned 200 in 3 ms
+ HTTP  3/25/2023 8:23:00 AM ::1 GET /sw.js
+ HTTP  3/25/2023 8:23:00 AM ::1 Returned 304 in 2 ms
+
+ INFO  Gracefully shutting down. Please wait...
+
+ WARN  Force-closing all open sockets...
