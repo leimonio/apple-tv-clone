@@ -12,8 +12,6 @@ import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
 import { cards } from '../../db'
 
 export function BannerPlaceholder() {
-  const [slider, setSlider] = useState('')
-
   const top = useBreakpointValue({ base: '90%', md: '50%' })
   const side = useBreakpointValue({ base: '30%', md: '40px' })
 
@@ -45,7 +43,7 @@ export function BannerPlaceholder() {
         top={top}
         transform={'translate(0%, -50%)'}
         zIndex={2}
-        onClick={() => slider?.slickPrev()}
+        onClick={() => {}}
       >
         <BiLeftArrowAlt size="40px" />
       </IconButton>
@@ -58,7 +56,7 @@ export function BannerPlaceholder() {
         top={top}
         transform={'translate(0%, -50%)'}
         zIndex={2}
-        onClick={() => slider?.slickNext()}
+        onClick={() => {}}
       >
         <BiRightArrowAlt size="40px" />
       </IconButton>
@@ -81,10 +79,7 @@ export function BannerPlaceholder() {
             top="15%"
             transform="translate(0, -50%)"
           >
-            <Heading
-              fontSize={{ base: '3xl', md: '4xl', lg: '7xl' }}
-            >
-            </Heading>
+            <Heading fontSize={{ base: '3xl', md: '4xl', lg: '7xl' }}></Heading>
           </Stack>
         </Container>
       </Box>

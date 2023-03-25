@@ -68,7 +68,7 @@ export const Signup = ({
           <AlertDialogContent minW={{ base: 70, md: 100 }}>
             <Container centerContent>
               <Center p={4}>
-                <Heading size="lg">Create Apple ID</Heading>
+                <Heading size="lg">Create Video Plus ID</Heading>
               </Center>
               <FormControl mt={5}>
                 <InputGroup>
