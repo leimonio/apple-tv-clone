@@ -5,19 +5,17 @@ import { comingSoon } from '../db'
 
 export const HomeDetails = () => {
   const { id } = useParams()
-  const [storedData, setStoredData] = useState([])
-  useEffect(() => {
-    let filterData = comingSoon.filter((el) => el.id === id)
-    setStoredData(filterData)
-  }, [id])
+  const currentMovie = comingSoon.find((el) => el.id.toString() === id)
 
   return (
     <>
       <div className="playback">
         <video controls width="100%" height="100%" muted loop autoPlay>
-          {storedData.map((el) => (
-            <source key={el.id} src={el.video} type="video/mp4" />
-          ))}
+          <source
+            key={currentMovie.id}
+            src={currentMovie.video}
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
       </div>
