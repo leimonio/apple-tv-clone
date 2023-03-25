@@ -19,3 +19,5 @@ root.render(
     </Provider>
   </React.StrictMode>
 )
+
+window._containerContext = true;
