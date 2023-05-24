@@ -1,1 +1,0 @@
-# tvapple-clone
