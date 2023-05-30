@@ -20,6 +20,7 @@ const RemoteBanner = React.lazy(() =>
 function Home() {
   return (
     <Box top="30px" mt={68}>
+      {/* <Banner cards={cards} /> */}
       <BannerErrorBoundary fallback={<>Error while loading Banner</>}>
         <React.Suspense fallback={<h4>Loading remote banner...</h4>}>
           <RemoteBanner cards={cards} />
